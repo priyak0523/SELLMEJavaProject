@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Post Add</title>
+        <link rel="stylesheet" type="text/css" href="CSS/welcome.css"></link> 
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css"></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/i18n/defaults-*.min.js"></script>
+
+    </h:head>
+    <h:body style="background-color:#18BC9C;"> 
+        <h:form enctype="multipart/form-data" >
+
+            <div class="divheader">
+                <h1 class="title">
+                    SELL ME
+                </h1>
+            </div>
+
+
+            <div style="padding: 1%;margin-bottom:250px;margin-left:300px;margin-right:250px;">
+                <div style="background-color: white;padding: 10%">
+
+                    <fieldset class="form-group"> 
+                        <legend> Owner Details</legend>
+                        <h:panelGrid columns="3">
+
+                            <h:panelGroup><label for="focusedInput">UserName</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostEmail"  value="#{login.loginUsername}" disabled="true" class="form-control"/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><label for="focusedInput">Owner First Name</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostFname" value="#{adPost.adPost_firstName}" class="form-control" />#{adPost.adPost_firstName_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><label for="focusedInput">Owner Last Name</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostLname" value="#{adPost.adPost_lastName}" class="form-control"/>#{adPost.adPost_lastName_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><label for="focusedInput">Street</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostStreet" value="#{adPost.adPost_street}" class="form-control"/>#{adPost.adPost_street_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+                            <h:panelGroup><label for="focusedInput">City</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostCity" value="#{adPost.adPost_city}" class="form-control"/>#{adPost.adPost_city_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+                            <h:panelGroup><label for="focusedInput">Province</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostProvince" value="#{adPost.adPost_province}" class="form-control"/>#{adPost.adPost_province_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+                            <h:panelGroup><label for="focusedInput">Country</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostCountry" value="#{adPost.adPost_country}" class="form-control"/>#{adPost.adPost_country_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+                            <h:panelGroup><label for="focusedInput">Pincode</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostPincode" value="#{adPost.adPost_pincode}" class="form-control"/>#{adPost.adPost_pincode_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+                        </h:panelGrid> 
+                    </fieldset>
+
+
+                    <fieldset class="form-group"> 
+                        <legend> Contact Information</legend>
+                        <h:panelGrid columns="3">
+
+
+                            <h:panelGroup><label for="focusedInput">Email Address</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostEmail1" value="#{adPost.adPost_email}" class="form-control"/>#{adPost.adPost_email_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><label for="focusedInput">Owner Contact No</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostContact" value="#{adPost.adPost_contact}" class="form-control"/>#{adPost.adPost_contact_errmsg}</h:panelGroup>
+                            <h:panelGroup> </h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+
+                        </h:panelGrid> 
+                    </fieldset> 
+
+                    <fieldset class="form-group"> 
+                        <legend> Advertisement Details</legend>
+                        <h:panelGrid columns="3">
+
+
+                            <h:panelGroup><label for="focusedInput">Add Title Descri.</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputText id="adPostTitle" value="#{adPost.adPost_ad_title}" class="form-control"/>#{adPost.adPost_ad_title_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+                            <h:panelGroup><label for="focusedInput">Category</label></h:panelGroup>
+                            <h:panelGroup>
+                                <h:selectOneMenu value="#{adPost.adPost_category}" class="selectpicker">
+                                    <f:selectItem  itemValue="Computer/Laptop" itemLabel="Computer/Laptop" />
+                                    <f:selectItem  itemValue="Car" itemLabel="Car" />
+                                    <f:selectItem  itemValue="Mobile" itemLabel="Mobile" />
+                                    <f:selectItem  itemValue="Cycle" itemLabel="Cycle" />
+                                    <f:selectItem  itemValue="Watch" itemLabel="Watch" />
+                                    <f:selectItem  itemValue="Snow Mobiles" itemLabel="Snow Mobiles" />
+                                    <f:selectItem  itemValue="Head Phones" itemLabel="Head Phones" />
+                                    <f:selectItem  itemValue="Home" itemLabel="Home" />
+                                    <f:selectItem  itemValue="Furniture" itemLabel="Furniture" />
+                                </h:selectOneMenu>
+                            </h:panelGroup>
+                            <h:panelGroup> </h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><label for="focusedInput">Description</label></h:panelGroup>
+                            <h:panelGroup class="dispalymsg"><h:inputTextarea id="adPostDescription" value="#{adPost.adPost_ad_des}" class="form-control"/>#{adPost.adPost_ad_des_errmsg}</h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+
+                            <h:panelGroup><br/></h:panelGroup>
+                            <h:panelGroup></h:panelGroup>
+                            <h:panelGroup></h:panelGroup> 
+
+
+                        </h:panelGrid> 
+                    </fieldset>
+
+
+
+
+                    <fieldset class="form-group"> 
+                        <legend> Advertisement Details</legend>
+
+                        <h:panelGroup><label for="focusedInput">Upload Image</label> <h:inputFile value="#{adPost.file}" class="btn btn-primary"/></h:panelGroup>
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup><h:commandButton value="Upload" action="#{adPost.upload()}" class="btn btn-primary"></h:commandButton></h:panelGroup>                      
+                    </fieldset>
+
+                    <h:panelGroup></h:panelGroup>
+                    <h:panelGroup></h:panelGroup>
+                    <h:panelGroup></h:panelGroup>
+
+                    <div>
+
+                        <c:if test="#{adPost.entryCounter}">
+                            <h:commandButton id="adPostSubmit" value="Submit" action="#{adPost.insertedData()}" class="btn btn-primary">
+                            </h:commandButton>
+                        </c:if>
+
+
+                        <c:if test="#{!adPost.entryCounter}">
+                            <h:commandButton id="adPostEdit" value="Edit" action="#{adPost.updateList()}" class="btn btn-primary">
+                            </h:commandButton>
+                        </c:if>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </h:form>
+    </h:body>
+</html>
+
