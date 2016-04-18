@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" >
+
+    <h:head>
+        <title>Register Page</title>
+        <link rel="stylesheet" type="text/css" href="CSS/welcome.css"></link> 
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css"></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/i18n/defaults-*.min.js"></script>
+
+    </h:head>
+    <h:body style="background-color:#18BC9C;">      
+
+
+        <div class="divheader">
+            <h1 class="title">
+                SELL ME
+            </h1>
+        </div>
+
+        <div style="width: 50%;margin:0 auto;">
+            <div style="background-color: #E7E1E1;padding: 5%">
+                <h:form>
+                    <h:panelGrid columns="3"  >
+
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup class="dispalymsg">#{homePage.userNameerr}</h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup>First Name:</h:panelGroup>
+                        <h:panelGroup class="dispalymsg"><h:inputText id="regFname" value="#{homePage.firstName}" class="form-control"/>#{homePage.firstNameErr} </h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup>Last Name:</h:panelGroup>
+                        <h:panelGroup class="dispalymsg"><h:inputText id="regLname"  value="#{homePage.lastName}" class="form-control"/>#{homePage.lastNameErr} </h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup>Email Address:</h:panelGroup>
+                        <h:panelGroup class="dispalymsg"><h:inputText id="regEmail" value="#{homePage.email}" class="form-control"/>#{homePage.emailErr}</h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup>Confirm Email:</h:panelGroup>
+                        <h:panelGroup class="dispalymsg"><h:inputText id="regEmail1"  value="#{homePage.emailConfirm}" class="form-control" />#{homePage.emailConfirmErr} </h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup> 
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup>Password:</h:panelGroup>
+                        <h:panelGroup class="dispalymsg"><h:inputSecret id="regPassword1" value="#{homePage.password}" class="form-control"/>#{homePage.passwordErr}</h:panelGroup>
+                        <h:panelGroup></h:panelGroup> 
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup> 
+
+                        <h:panelGroup>Confirm Password:</h:panelGroup>
+                        <h:panelGroup class="dispalymsg"><h:inputSecret id="regPassword2" value="#{homePage.passwordConfirm}" class="form-control"/>#{homePage.passwordConfirmErr}</h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup>Security Question:</h:panelGroup>
+                        <h:panelGroup>
+                            <h:selectOneMenu value="#{homePage.securityQues}" class="selectpicker">
+                                <f:selectItem  itemValue="What was your childhood nickname?" itemLabel="What was your childhood nickname?" />
+                                <f:selectItem itemValue="What is your oldest sibling's middle name?" itemLabel="What is your oldest sibling's middle name?" />
+                                <f:selectItem itemValue="In what city or town was your first job?" itemLabel="In what city or town was your first job?" />
+                                <f:selectItem itemValue="What is your oldest cousin's first and last name?" itemLabel="What is your oldest cousin's first and last name?" />
+                                <f:selectItem itemValue="What was the name of your first stuffed animal?" itemLabel="What was the name of your first stuffed animal?" />
+                                <f:selectItem itemValue="What is your maternal grandmother's maiden name?" itemLabel="What is your maternal grandmother's maiden name?" />
+                            </h:selectOneMenu>
+                        </h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup>Answer:</h:panelGroup>
+                        <h:panelGroup class="dispalymsg"><h:inputSecret id="regAnswer" value="#{homePage.securityAnswer}" class="form-control"/>#{homePage.securityAnswerErr}</h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup>
+                            <h:commandButton id="regCancel" value="Cancel" action="faces/index.xhtml" class="btn btn-primary" style="margin-right: 80px;"></h:commandButton>
+                            <h:commandButton id="regSubmit" value="Submit" action="#{homePage.doValidation()}" class="btn btn-primary"></h:commandButton></h:panelGroup>
+                    </h:panelGrid>
+
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
+
