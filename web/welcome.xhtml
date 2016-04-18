@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+
+    <h:head>
+        <title>Welcome!-Home Page</title>
+        <link rel="stylesheet" type="text/css" href="CSS/welcome.css"></link> 
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        </link>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+        <script type="text/javascript">
+            $('#myModal').on('shown.bs.modal', function ()
+            {
+                $('#myInput').focus()
+            })
+        </script>
+
+    </h:head>
+    <h:body style="background-color:#18BC9C;">
+        <div >
+            <h:form>
+                <div class="divheader">
+                    <h1 class="title">
+                        SELL ME
+                    </h1>
+
+                </div>
+
+                <div style="padding:50px;background-color:#E7E1E1;">
+                    <button type="button" class="btn btn-primary" style="margin-left: 350px;">Home</button>
+                    <button type="button" class="btn btn-primary" style="margin-left: 100px;">Profile</button>
+                    <button type="button" class="btn btn-primary" style="margin-left: 100px;">Others</button>
+                    <h:commandButton id="welcomeLogOut" value="Sign Out" action="#{login.loginLogOut()}" style="margin-left: 100px;" class="btn btn-primary" ></h:commandButton>  
+                </div>
+
+                <div style="background-color:#E7E1E1;">
+                    <div class="container" style="background-color:#FFF;"> 
+
+                        <div style="margin-bottom: 50px;text-align: center;">
+                            <h1>
+                                Category
+                            </h1>
+                        </div>
+                        <div style="width: 900px; margin:0 auto">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-4">
+                                    <!-- <a href="faces/adPost.xhtml" class="thumbnail">
+                                         <img src="images/laptop.png" alt="car"  height="160" width="200" > </img>
+                                     </a>-->
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/laptop.png" alt="laptop"  height="160" width="200" > </img>
+                                    </h:commandLink>
+                                </div> 
+                                <div class="col-xs-6 col-md-4">
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/car.jpg" alt="car"  height="160" width="190"> </img>
+                                    </h:commandLink>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/mobile.jpg" alt="mobile"  height="160" width="190"> </img>
+                                    </h:commandLink>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-4">
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/cycle.jpg" alt="cycle"  height="160" width="190"> </img>
+                                    </h:commandLink>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/watch.jpg" alt="watch"  height="160" width="162"> </img>
+                                    </h:commandLink>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/snowmobiles.jpg" alt="snowmobiles"  height="160" width="265"> </img>
+                                    </h:commandLink>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-4">
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/headphone.jpg" alt="headphone"  height="160" width="270"> </img>
+                                    </h:commandLink>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/house.jpg" alt="house"  height="160" width="183"> </img>
+                                    </h:commandLink>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <h:commandLink value="" action="#{adPost.returnfun()}" class="thumbnail">
+                                        <img src="images/furniture.jpg" alt="furniture"  height="160" width="190"> </img>
+                                    </h:commandLink>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <h:dataTable value="#{adPost.adPostListObj}" var="adds" border="1" width="100%" 
+                                     styleClass="table table-striped table-bordered"
+                                     class="table table-hover" > 
+
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Image"/>
+                                </f:facet>
+                                <h:graphicImage url="images/#{adds.adPost_file_path}" width="200" height="150"></h:graphicImage>
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Category"/>
+                                </f:facet>
+                                <h:outputText value="#{adds.adPost_category}"/>
+                            </h:column>
+
+
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="View"/>
+                                </f:facet>
+
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal#{adPost.adPost_ref_no}">
+                                    View Details
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal#{adPost.adPost_ref_no}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" action="#{adPost.getListValue(adds)}">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">#{adds.adPost_ad_title}</h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <table class="table">
+                                                    <thead class="thead-inverse">
+                                                        <tr>
+                                                            <th>Category</th>
+                                                            <th>Details</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>First Name</td>
+                                                            <td>#{adPost.adPost_firstName}</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>Last Name</td>
+                                                            <td>#{adPost.adPost_lastName}</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>Street</td>
+                                                            <td>#{adPost.adPost_street}</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>City</td>
+                                                            <td>#{adPost.adPost_city}</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>Province</td>
+                                                            <td>#{adPost.adPost_province}</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>Pincode</td>
+                                                            <td>#{adPost.adPost_pincode}</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>Email</td>
+                                                            <td>#{adPost.adPost_email}</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>Contact</td>
+                                                            <td>#{adPost.adPost_contact}</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>Description</td>
+                                                            <td>#{adPost.adPost_ad_des}</td>
+                                                        </tr>                                                 
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </h:column>
+
+
+                            <h:column>
+                                <f:facet name="header">Action Edit</f:facet>
+                                <h:commandLink value="Delete" 
+                                               action="#{adPost.deleteList(adds)}" />
+                            </h:column> 
+
+                            <h:column>
+                                <f:facet name="header">Action Delete</f:facet>
+                                <h:commandLink value="Edit" 
+                                               action="#{adPost.editList(adds)}" />
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+                </div>
+
+
+            </h:form>
+        </div>
+    </h:body>
+</html>
