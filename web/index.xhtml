@@ -3,10 +3,67 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>SELL ME</title>
+        <link rel="stylesheet" type="text/css" href="CSS/welcome.css"></link> 
+        <link rel="stylesheet" href="CSS/bootstrap.min.css"></link>
+
     </h:head>
-    <h:body>
-        Hello from Facelets
+    <h:body style="background-color:#18BC9C;">
+        <h:form>
+
+            <div class="divheader">
+                <h1 class="title">
+                    SELL ME
+                </h1>
+            </div>
+
+            <div style="padding: 1%;margin-bottom:250px;margin-left:250px;margin-right:250px;">
+                <div style="background-color: #E7E1E1;padding: 10%">
+                    <h:panelGrid columns="3" style="margin:0 auto;">
+
+                        <h:panelGroup>UserName:</h:panelGroup>
+
+                        <h:panelGroup class="dispalymsg">
+                        <h:inputText id="indexuName" value="#{login.loginUsername}" class="form-control" />#{login.usernameerr}</h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+
+                        <h:panelGroup>Password:</h:panelGroup>
+                        <h:panelGroup class="dispalymsg"><h:inputSecret id="indexPass" value="#{login.loginPassword}" class="form-control"/>#{login.passworderr}</h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup><h:commandButton id="indexSubmit" value="Submit"  action="#{login.setLogindb()}" class="btn btn-primary" style="margin-left:50px;"/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        
+                        <h:panelGroup><br/></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+                        <h:panelGroup></h:panelGroup>
+                        <h:panelGroup>
+                            <h:outputLink value="faces/register.xhtml" style="margin-right: 25px;">Register</h:outputLink>
+                            <h:outputLink value="faces/passwordRecovery.xhtml">Forget Password</h:outputLink>
+                        </h:panelGroup>
+                        <h:panelGroup></h:panelGroup>
+
+
+                    </h:panelGrid>
+                </div>
+            </div>
+        </h:form>             
     </h:body>
 </html>
 
